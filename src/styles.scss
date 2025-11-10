@@ -1,10 +1,43 @@
-// 1️⃣ Importa funciones de Bootstrap
 @import "bootstrap/scss/functions";
 
-// 2️⃣ Sobrescribe variables ANTES del core
-$primary: #003353;
-$warning: #FF9800;
-//$success: #4CAF50;
+// 🎨 Paleta personalizada minimalista
+$primary: #0f172a;
+$secondary: #475569;
+$success: #10b981;
+$info: #0ea5e9;
+$warning: #facc15;
+$danger: #ef4444;
+$light: #f8fafc;
+$dark: #020617;
 
-// 3️⃣ Importa el core completo
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark
+);
+
+// 🧩 Tipografía y base
+$font-family-sans-serif: 'Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', sans-serif;
+
+// 🚀 Importa Bootstrap
 @import "bootstrap/scss/bootstrap";
+
+// 🎯 Forzar texto blanco en TODOS los botones
+.btn-primary,
+.btn-secondary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger {
+  color: #fff !important;
+}
+
+// 🪄 Hover más elegante (opcional)
+.btn:hover {
+  filter: brightness(1.15);
+}
